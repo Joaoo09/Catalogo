@@ -1,0 +1,22 @@
+.layout {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 72px);
+  overflow: hidden;
+}
+
+.conteudo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+@media (max-width: 1023px) {
+  .conteudo {
+    padding-top: 3.5rem;
+  }
+}

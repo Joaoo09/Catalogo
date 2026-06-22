@@ -1,0 +1,315 @@
+export const COLORS = {
+  Atol: {
+    name: "Atol",
+    front: "/tshirts/atol/frenteatol.png",
+    back: "/tshirts/atol/versoatol.png",
+    cor: "#49d6f3",
+  },
+  "Azul Eclipse": {
+    name: "Azul Eclipse",
+    front: "/tshirts/a-eclipse/frenteeclipse.png",
+    back: "/tshirts/a-eclipse/versoeclipse.png",
+    cor: "#0e3560",
+  },
+  "Azul Pastel": {
+    name: "Azul Pastel",
+    front: "/tshirts/a-pastel/frenteapastel.png",
+    back: "/tshirts/a-pastel/versoapastel.png",
+    cor: "#7591a9",
+  },
+  "Azul Real": {
+    name: "Azul Real",
+    front: "/tshirts/a-real/frenteareal.png",
+    back: "/tshirts/a-real/versoareal.png",
+    cor: "#1a569c",
+  },
+  Alperce: {
+    name: "Alperce",
+    front: "/tshirts/alperce/alpercefrente.png",
+    back: "/tshirts/alperce/alperseverso.png",
+    cor: "#ffa668",
+  },
+  Amarelo: {
+    name: "Amarelo",
+    front: "/tshirts/amarelo/amarelofrente.png",
+    back: "/tshirts/amarelo/amareloverso.png",
+    cor: "#ffdd02",
+  },
+  "Amarelo Digital": {
+    name: "Amarelo Digital",
+    front: "/tshirts/Amarelo-Digital/amarelodfrente.png",
+    back: "/tshirts/Amarelo-Digital/amarelodverso.png",
+    cor: "#ded48c",
+  },
+  "Amarelo Pastel": {
+    name: "Amarelo Pastel",
+    front: "/tshirts/Amarelo-Pastel/AmreloPfrente.png",
+    back: "/tshirts/Amarelo-Pastel/AmareloPverso.png",
+    cor: "#f7dea8",
+  },
+  Aqua: {
+    name: "Aqua",
+    front: "/tshirts/aqua/aquafrente.png",
+    back: "/tshirts/aqua/aquaverso.png",
+    cor: "#14a1f0",
+  },
+  Areia: {
+    name: "Areia",
+    front: "/tshirts/areia/frenteareia.png",
+    back: "/tshirts/areia/versoareia.png",
+    cor: "#eabd60",
+  },
+  Bordô: {
+    name: "Bordô",
+    front: "/tshirts/bordo/frentebordo.png",
+    back: "/tshirts/bordo/versobordo.png",
+    cor: "#82151a",
+  },
+  Branco: {
+    name: "Branco",
+    front: "/tshirts/Branco/brancofrente.png",
+    back: "/tshirts/Branco/brancoverso.png",
+    cor: "#ffffff",
+  },
+  "Branco Matizado": {
+    name: "Branco Matizado",
+    front: "/tshirts/branco-matizado/frentebrancomatizado.png",
+    back: "/tshirts/branco-matizado/versobrancomatizado.png",
+    cor: "/cor/284.jpg",
+  },
+  Castanho: {
+    name: "Castanho",
+    front: "/tshirts/castanho/frentecastanho.png",
+    back: "/tshirts/castanho/versocastanho.png",
+    cor: "#45291e",
+  },
+  "Cherry Lacquer": {
+    name: "Cherry Lacquer",
+    front: "/tshirts/cherrylacquer/frentecherrylacquer.png",
+    back: "/tshirts/cherrylacquer/versocherrylacquer.png",
+    cor: "#7e314d",
+  },
+  "Cinza Frio": {
+    name: "Cinza Frio",
+    front: "/tshirts/cinza-frio/frentecinzafrio.png",
+    back: "/tshirts/cinza-frio/versocinzafrio.png",
+    cor: "#abb0b2",
+  },
+  "Cinza Matizado": {
+    name: "Cinza Matizado",
+    front: "/tshirts/cinza-matizado/frentecinzamatizado.png",
+    back: "/tshirts/cinza-matizado/versocinzamatizado.png",
+    cor: "/cor/311.jpg",
+  },
+  Cinzento: {
+    name: "Cinzento",
+    front: "/tshirts/cinzento/frentecinzento.png",
+    back: "/tshirts/cinzento/versocinzento.png",
+    cor: "#756f6f",
+  },
+  "Cool Matcha": {
+    name: "Cool Matcha",
+    front: "/tshirts/coolmatcha/frentecoolmatcha.png",
+    back: "/tshirts/coolmatcha/versocoolmatcha.png",
+    cor: "#a2c49b",
+  },
+  "Creme Brûlée": {
+    name: "Creme Brûlée",
+    front: "/tshirts/creme/frentecreme.png",
+    back: "/tshirts/creme/versocreme.png",
+    cor: "#dbcdb3",
+  },
+  "Crystal Blue": {
+    name: "Crystal Blue",
+    front: "/tshirts/cristalblue/frentecristalblue.png",
+    back: "/tshirts/cristalblue/versocristalblue.png",
+    cor: "#a1ccde",
+  },
+  Fushia: {
+    name: "Fushia",
+    front: "/tshirts/fushia/frentefushia.png",
+    back: "/tshirts/fushia/versofushia.png",
+    cor: "#d5006a",
+  },
+  Laranja: {
+    name: "Laranja",
+    front: "/tshirts/laranja/frentelaranja.png",
+    back: "/tshirts/laranja/versolaranja.png",
+    cor: "#f39728",
+  },
+  Lavanda: {
+    name: "Lavanda",
+    front: "/tshirts/lavanda/frentelavanda.png",
+    back: "/tshirts/lavanda/versolavanda.png",
+    cor: "#c2abc5",
+  },
+  Limão: {
+    name: "Limão",
+    front: "/tshirts/limao/frentelimao.png",
+    back: "/tshirts/limao/versolimao.png",
+    cor: "#f7ea68",
+  },
+  Mostarda: {
+    name: "Mostarda",
+    front: "/tshirts/mostarda/frentemostarda.png",
+    back: "/tshirts/mostarda/versomostarda.png",
+    cor: "#e08b28",
+  },
+  Mousse: {
+    name: "Mousse",
+    front: "/tshirts/mousse/frentemousse.png",
+    back: "/tshirts/mousse/versomousse.png",
+    cor: "#a57863",
+  },
+  "Pastel Salmão": {
+    name: "Pastel Salmão",
+    front: "/tshirts/pastelsalmao/frentesalmao.png",
+    back: "/tshirts/pastelsalmao/versosalmao.png",
+    cor: "#f6ad9c",
+  },
+  Preto: {
+    name: "Preto",
+    front: "/tshirts/Preto/frentepreto.png",
+    back: "/tshirts/Preto/versopreto.png",
+    cor: "#19171a",
+  },
+  "Rosa Orquídea": {
+    name: "Rosa Orquídea",
+    front: "/tshirts/rosa-orquidea/frenterosaorquidea.png",
+    back: "/tshirts/rosa-orquidea/versorosaorquidea.png",
+    cor: "#ec9fc1",
+  },
+  "Rosa Velho": {
+    name: "Rosa Velho",
+    front: "/tshirts/rosa-velho/frenterosa-velho.png",
+    back: "/tshirts/rosa-velho/versorosa-velho.png",
+    cor: "#b77c82",
+  },
+  Roxo: {
+    name: "Roxo",
+    front: "/tshirts/roxo/frenteroxo.png",
+    back: "/tshirts/roxo/versoroxo.png",
+    cor: "#71325f",
+  },
+  Terracota: {
+    name: "Terracota",
+    front: "/tshirts/terracota/frenteterracota.png",
+    back: "/tshirts/terracota/versoterracota.png",
+    cor: "#b26150",
+  },
+  Tropa: {
+    name: "Tropa",
+    front: "/tshirts/tropa/frentetropa.png",
+    back: "/tshirts/tropa/versotropa.png",
+    cor: "#654f37",
+  },
+  "Verde Floresta": {
+    name: "Verde Floresta",
+    front: "/tshirts/verde-floresta/frenteverdefloresta.png",
+    back: "/tshirts/verde-floresta/versoverdefloresta.png",
+    cor: "#174c42",
+  },
+  "Verde Jades": {
+    name: "Verde Jades",
+    front: "/tshirts/verde-jades/frenteverdejades.png",
+    back: "/tshirts/verde-jades/versoverdejades.png",
+    cor: "#739862",
+  },
+  "Verde Pântano": {
+    name: "Verde Pântano",
+    front: "/tshirts/verde-pantano/frenteverdepantano.png",
+    back: "/tshirts/verde-pantano/versoverdepantano.png",
+    cor: "#006263",
+  },
+  "Verde Abdia": {
+    name: "Verde Abdia",
+    front: "/tshirts/verdeabdia/frenteverdeabdia.png",
+    back: "/tshirts/verdeabdia/versoabdia.png",
+    cor: "#a7a694",
+  },
+  "Verde Maçã": {
+    name: "Verde Maçã",
+    front: "/tshirts/verdemaca/frenteverdemaca.png",
+    back: "/tshirts/verdemaca/versoverdemaca.png",
+    cor: "#b0bf0c",
+  },
+  "Verde Pastos": {
+    name: "Verde Pastos",
+    front: "/tshirts/verdepastos/frenteverdepastos.png",
+    back: "/tshirts/verdepastos/versoverdepastos.png",
+    cor: "#52a52f",
+  },
+  Vermelho: {
+    name: "Vermelho",
+    front: "/tshirts/vermelho/frentevermelho.png",
+    back: "/tshirts/vermelho/versovermelho.png",
+    cor: "#ce2f3a",
+  },
+};
+
+export const SWEATSHIRT_COLORS = {
+White: {
+  name: "White",
+  front:"/sweatshirts/white/white_front.webp",
+  back: "/sweatshirts/white/white_back.webp",
+  cor: "#ffffff",
+},
+Black: {
+  name: "Black",
+  front: "/sweatshirts/black/black_front.webp",
+  back: "/sweatshirts/black/black_back.webp",
+  cor: "#000000",
+},
+Red: {
+  name: "Red",
+  front: "/sweatshirts/red/red_front.webp",
+  back: "/sweatshirts/red/red_back.webp",
+  cor: "#ff0000",
+},
+Navy: {
+  name: "Navy",
+  front: "/sweatshirts/navy/Navy_front.webp",
+  back: "/sweatshirts/navy/Navy_back.webp",
+  cor: "#002a3a",
+},
+"Royal Blue": {
+  name: "Royal Blue",
+  front: "/sweatshirts/royal_blue/royalblue_front.webp",
+  back: "/sweatshirts/royal_blue/royalblue_back.webp",
+  cor: "#0055b8",
+},
+"Amazonia Green": {
+  name: "Amazonia Green",
+  front: "/sweatshirts/amazonia_green/ag_front.png",
+  back: "/sweatshirts/amazonia_green/ag_back.webp",
+  cor: "#747a4c",
+},
+Aqua: {
+  name: "Aqua",
+  front: "/sweatshirts/aqua/aqua_front.webp",
+  back: "/sweatshirts/aqua/aqua_back.webp",
+  cor: "#0183c1",
+},
+  Aloe: {
+    name: "Aloe",
+    front: "/sweatshirts/aloe/ae_back.webp",
+    back: "/sweatshirts/aloe/ae_back.webp",
+    cor: "#7b9e87",
+  },
+};
+
+
+export const PRODUCTS = {
+  tshirt: {
+    id: "tshirt",
+    label: "T-Shirt",
+    colors: COLORS,
+  },
+  sweatshirt: {
+    id: "sweatshirt",
+    label: "Sweatshirt",
+    colors: SWEATSHIRT_COLORS,
+  },
+};
+
+export const getColorHex = (productType, colorName) => PRODUCTS[productType]?.colors[colorName]?.cor || "#ffffff";
