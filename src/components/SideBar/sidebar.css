@@ -216,7 +216,7 @@
 }
 
 .color-dropdown.color-dropdown--open .color-dropdown-panel {
-  max-height: 460px;
+  max-height: fit-content;
   opacity: 1;
   margin-top: 12px;
   overflow: visible;
