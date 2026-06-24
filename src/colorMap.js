@@ -280,8 +280,8 @@ Navy: {
 },
 "Amazonia Green": {
   name: "Amazonia Green",
-  front: "/sweatshirts/amazonia_green/ag_front.png",
-  back: "/sweatshirts/amazonia_green/ag_back.webp",
+  front: "/sweatshirts/amazonia_green/ag_front.webp",
+  back: "",
   cor: "#747a4c",
 },
 Aqua: {
@@ -313,7 +313,7 @@ Brick: {
   name: "Bottle Green",
   front: "/sweatshirts/bottle_green/bottlegreen_front.webp",
   back: "/sweatshirts/bottle_green/bottlegreen_back.webp",
-  cor: "#14572cs",
+  cor: "#14572c",
 },
 Brown: {
   name: "Brown",
@@ -361,7 +361,7 @@ Denim: {
 Fucsia: {
   name: "Fucsia",
   front: "/sweatshirts/fucsia/fucsia_front.webp",
-  back: "/sweatshirts/fucsia/fucsia_back.webp",
+  back: "",
   cor: "#bb378b",
 },
 Graphite: {
@@ -398,374 +398,423 @@ Apricot: {
   name: "Apricot",
   front: "/sweatshirts/apricot/apr_front.webp",
   back: "/sweatshirts/apricot/apr_back.webp",
-  cor: "#f4c28f",
+  cor: "#ffd17b",
 },
 
 Aquamarine: {
   name: "Aquamarine",
   front: "/sweatshirts/aquamarine/aqm_front.webp",
   back: "/sweatshirts/aquamarine/aqm_back.webp",
-  cor: "#7fffd4",
+  cor: "#4abdc4",
 },
 
 "Ash Melange": {
   name: "Ash Melange",
   front: "/sweatshirts/ash_melange/as_front.webp",
   back: "/sweatshirts/ash_melange/as_back.webp",
-  cor: "#d4d4d4",
+  cor: "/cor/melage.jpg",
 },
 
 Azalea: {
   name: "Azalea",
   front: "/sweatshirts/azalea/azalea_front.webp",
   back: "/sweatshirts/azalea/azalea_back.webp",
-  cor: "#f7c1d9",
+  cor: "#fa7fb5",
 },
 
 "Butter Cream": {
   name: "Butter Cream",
   front: "/sweatshirts/butter_cream/bt_front.webp",
   back: "/sweatshirts/butter_cream/bt_back.webp",
-  cor: "#f7e6a1",
+  cor: "#faf0e7",
 },
 
 Cardinal: {
   name: "Cardinal",
   front: "/sweatshirts/cardinal/ca_front.webp",
   back: "",
-  cor: "#9b1b30",
+  cor: "#572a31",
 },
 
 Charcoal: {
   name: "Charcoal",
   front: "/sweatshirts/charcoal/chc_front.webp",
   back: "/sweatshirts/charcoal/chc_back.webp",
-  cor: "#36454f",
+  cor: "#4a5254",
 },
 
 "Charcoal Heather": {
   name: "Charcoal Heather",
   front: "/sweatshirts/charcoal_heather/chch_front.webp",
   back: "/sweatshirts/charcoal_heather/chch_back.webp",
-  cor: "#555555",
+  cor: "/cor/chch.jpg",
 },
 
 Coral: {
   name: "Coral",
   front: "/sweatshirts/coral/co_front.webp",
   back: "/sweatshirts/coral/co_back.webp",
-  cor: "#ff7f50",
+  cor: "#ff8d6b",
 },
 
 "Dark Grey Melange": {
   name: "Dark Grey Melange",
   front: "/sweatshirts/dark_grey_melange/dgm_front.webp",
   back: "/sweatshirts/dark_grey_melange/dgm_back.webp",
-  cor: "#6b6b6b",
+  cor: "/cor/dgmelange.jpg",
 },
 
 "Denim Heather": {
   name: "Denim Heather",
   front: "/sweatshirts/denim_heather/dnh_front.webp",
   back: "/sweatshirts/denim_heather/dnh_back.webp",
-  cor: "#5f7486",
+  cor: "/cor/denim.jpg",
 },
 
 "Dusty Purple": {
   name: "Dusty Purple",
   front: "/sweatshirts/dusty_purple/dp_front.webp",
   back: "/sweatshirts/dusty_purple/dp_back.webp",
-  cor: "#b497bd",
+  cor: "#b67e9b",
 },
 
 "Fucsia Fluor": {
   name: "Fucsia Fluor",
   front: "/sweatshirts/fucsia_fluor/fuf_front.webp",
   back: "/sweatshirts/fucsia_fluor/fuf_back.webp",
-  cor: "#ff1493",
+  cor: "#ff40b4",
 },
 
 "Future Dark": {
   name: "Future Dark",
   front: "/sweatshirts/future_dark/fd_front.webp",
   back: "/sweatshirts/future_dark/fd_back.webp",
-  cor: "#2b2b2b",
+  cor: "#6c3b5e",
 },
 
 Gold: {
   name: "Gold",
   front: "/sweatshirts/gold/gold_front.webp",
   back: "/sweatshirts/gold/gold_back.webp",
-  cor: "#d4af37",
+  cor: "#ffd600",
 },
 
 "Gold Fluor": {
   name: "Gold Fluor",
   front: "/sweatshirts/gold_fluor/syf_front.webp",
   back: "/sweatshirts/gold_fluor/syf_back.webp",
-  cor: "#ffd700",
+  cor: "#e2e735",
 },
 
 "Grey Melange": {
   name: "Grey Melange",
   front: "/sweatshirts/grey_melange/gm_front.webp",
   back: "/sweatshirts/grey_melange/gm_back.webp",
-  cor: "#b0b0b0",
+  cor: "/cor/greymelange.jpg",
 },
 
 Ivory: {
   name: "Ivory",
   front: "/sweatshirts/ivory/iv_front.webp",
   back: "",
-  cor: "#fffff0",
+  cor: "#f0e6d4",
 },
 
 "Klein Blue": {
   name: "Klein Blue",
   front: "/sweatshirts/klein_blue/kb_front.webp",
   back: "/sweatshirts/klein_blue/kb_back.webp",
-  cor: "#002fa7",
+  cor: "#004e9e",
 },
 
 Lavender: {
   name: "Lavender",
   front: "/sweatshirts/lavender/lv_front.webp",
   back: "/sweatshirts/lavender/lv_back.webp",
-  cor: "#c8a2c8",
+  cor: "#bda4ce",
 },
 
 "Lemon Yellow": {
   name: "Lemon Yellow",
   front: "/sweatshirts/lemon_yellow/ley_front.webp",
-  back: "/sweatshirts/lemon_yellow/ley_yellow_back.webp",
-  cor: "#fff44f",
+  back: "/sweatshirts/lemon_yellow/ley_back.webp",
+  cor: "#ffe900",
 },
 
 "Light Purple": {
   name: "Light Purple",
   front: "/sweatshirts/light_purple/lp_front.webp",
   back: "/sweatshirts/light_purple/lp_back.webp",
-  cor: "#d8b4e2",
+  cor: "#ae96a6",
 },
 
 "Light Yellow": {
   name: "Light Yellow",
   front: "/sweatshirts/light_yellow/ly_front.webp",
   back: "/sweatshirts/light_yellow/ly_back.webp",
-  cor: "#fff9c4",
+  cor: "#f0e87d",
 },
 
 Lime: {
   name: "Lime",
   front: "/sweatshirts/lime/lime_front.png",
   back: "",
-  cor: "#a4c639",
+  cor: "#77bc21s",
 },
 
 "Lime Fluor": {
   name: "Lime Fluor",
   front: "/sweatshirts/lime_fluor/lmf_front.webp",
   back: "",
-  cor: "#ccff00",
+  cor: "#39d432",
 },
 
 "Lime Stone": {
   name: "Lime Stone",
   front: "/sweatshirts/lime_stone/ls_front.webp",
   back: "/sweatshirts/lime_stone/ls_back.webp",
-  cor: "#cfc8b6",
+  cor: "#dfdbab",
 },
 
 "Mauve Light": {
   name: "Mauve Light",
   front: "/sweatshirts/mauve_light/ml_front.webp",
   back: "/sweatshirts/mauve_light/ml_back.webp",
-  cor: "#d8bfd8",
+  cor: "#ffdedc",
 },
 
 "Mexican Green": {
   name: "Mexican Green",
   front: "/sweatshirts/mexican_green/mxg_front.webp",
   back: "",
-  cor: "#009b77",
+  cor: "#37665a",
 },
 
 "Mint Green": {
   name: "Mint Green",
   front: "/sweatshirts/mint_green/mg_front.webp",
   back: "/sweatshirts/mint_green/mg_back.webp",
-  cor: "#98ff98",
+  cor: "#96e1c0",
 },
 
 "Mocha Mousse": {
   name: "Mocha Mousse",
   front: "/sweatshirts/mocha_mousse/mm_front.webp",
   back: "/sweatshirts/mocha_mousse/mm_back.webp",
-  cor: "#967969",
+  cor: "#ad7f67",
 },
 
 "Moss Green": {
   name: "Moss Green",
   front: "/sweatshirts/moss_green/mo_front.webp",
   back: "/sweatshirts/moss_green/mo_back.webp",
-  cor: "#8a9a5b",
+  cor: "#a0bebe",
 },
 
 Mustard: {
   name: "Mustard",
   front: "/sweatshirts/mustard/mu_front.webp",
   back: "",
-  cor: "#e1ad01",
+  cor: "#ffb71c",
 },
 
 Ocher: {
   name: "Ocher",
   front: "/sweatshirts/ocher/oc_front.webp",
   back: "/sweatshirts/ocher/oc_back.webp",
-  cor: "#cc7722",
+  cor: "#a18526",
 },
 
 Orange: {
   name: "Orange",
   front: "/sweatshirts/orange/or_front.webp",
   back: "/sweatshirts/orange/or_back.webp",
-  cor: "#ff7f00",
+  cor: "#ff671c",
 },
 
 "Orange Fluor": {
   name: "Orange Fluor",
   front: "/sweatshirts/orange_fluor/orf_front.webp",
   back: "/sweatshirts/orange_fluor/orf_back.webp",
-  cor: "#ff5f1f",
+  cor: "#ff4713",
 },
 
 Orchid: {
   name: "Orchid",
   front: "/sweatshirts/orchid/od_front.webp",
   back: "/sweatshirts/orchid/od_back.webp",
-  cor: "#da70d6",
+  cor: "#7c318a",
 },
 
 "Petrol Blue": {
   name: "Petrol Blue",
   front: "/sweatshirts/petrol_blue/pb_front.webp",
   back: "/sweatshirts/petrol_blue/pb_back.webp",
-  cor: "#1f5a75",
+  cor: "#4b9ca0",
 },
 
 Pink: {
   name: "Pink",
   front: "/sweatshirts/pink/pk_front.webp",
   back: "/sweatshirts/pink/pk_back.webp",
-  cor: "#ffc0cb",
+  cor: "#f7dadf",
 },
 
 "Pink Gum": {
   name: "Pink Gum",
   front: "/sweatshirts/pink_gum/pkg_front.webp",
   back: "/sweatshirts/pink_gum/pkg_back.webp",
-  cor: "#f7a8b8",
+  cor: "#b31b83",
 },
 
 "Pink Vintage": {
   name: "Pink Vintage",
   front: "/sweatshirts/pink_vintage/pv_front.webp",
   back: "/sweatshirts/pink_vintage/pv_back.webp",
-  cor: "#d8a39d",
+  cor: "#eea594",
 },
 
 Purple: {
   name: "Purple",
   front: "/sweatshirts/purple/pu_front.webp",
   back: "/sweatshirts/purple/pu_back.webp",
-  cor: "#6a0dad",
+  cor:  "#351f68",
 },
 
 Sand: {
   name: "Sand",
   front: "/sweatshirts/sand/sa_front.webp",
   back: "/sweatshirts/sand/sa_back.webp",
-  cor: "#d2b48c",
+  cor: "#e1b77d",
 },
 
 Silver: {
   name: "Silver",
   front: "/sweatshirts/silver/sl_front.webp",
   back: "/sweatshirts/silver/sl_back.webp",
-  cor: "#c0c0c0",
+  cor: "#cbcbcb",
 },
 
 "Sky Blue": {
   name: "Sky Blue",
   front: "/sweatshirts/sky_blue/sk_front.webp",
   back: "/sweatshirts/sky_blue/sk_back.webp",
-  cor: "#87ceeb",
+  cor: "#96d4e9",
 },
 
 "Spring Green": {
   name: "Spring Green",
   front: "/sweatshirts/spring_green/sg_front.webp",
   back: "",
-  cor: "#00ff7f",
+  cor: "#3cbf72",
 },
 
 "Steel Blue": {
   name: "Steel Blue",
   front: "/sweatshirts/steel_blue/sb_front.webp",
   back: "",
-  cor: "#4682b4",
+  cor: "#4f738b",
 },
 
 Teal: {
   name: "Teal",
   front: "/sweatshirts/teal/te_front.webp",
   back: "/sweatshirts/teal/te_back.webp",
-  cor: "#008080",
+  cor: "#849795",
 },
 
 "Tropical Green": {
   name: "Tropical Green",
   front: "/sweatshirts/tropical_green/tp_front.webp",
   back: "/sweatshirts/tropical_green/tp_back.webp",
-  cor: "#00a86b",
+  cor: "#009578",
 },
 
 Turquoise: {
   name: "Turquoise",
   front: "/sweatshirts/turquoise/tu_front.webp",
   back: "",
-  cor: "#40e0d0",
+  cor: "#00a6b6",
 },
 
 Violet: {
   name: "Violet",
   front: "/sweatshirts/violet/vi_front.webp",
   back: "/sweatshirts/violet/vi_back.webp",
-  cor: "#8f00ff",
+  cor: "#9b99b1",
 },
 
 "Warm Red": {
   name: "Warm Red",
   front: "/sweatshirts/warm_red/wr_front.webp",
   back: "",
-  cor: "#d9381e",
+  cor: "#e7374c",
 },
 
 "Wolf Grey": {
   name: "Wolf Grey",
   front: "/sweatshirts/wolf_grey/wg_front.webp",
   back: "",
-  cor: "#8c8c8c",
+  cor: "#5d6263",
 },
 
 Zinco: {
   name: "Zinco",
   front: "/sweatshirts/zinco/zc_front.webp",
   back: "",
-  cor: "#b7b7b7",
+  cor: "#65665e",
 },
 };
 
+export const ART_GALLERY = [
+  "desgin-36.webp",
+  "design-1.webp",
+  "design-10.webp",
+  "design-11.webp",
+  "design-12.webp",
+  "design-13.webp",
+  "design-14.webp",
+  "design-15.webp",
+  "design-16.webp",
+  "design-17.webp",
+  "design-18.webp",
+  "design-19.webp",
+  "design-2.webp",
+  "design-20.webp",
+  "design-21.webp",
+  "design-22.webp",
+  "design-23.webp",
+  "design-24.webp",
+  "design-25.webp",
+  "design-26.webp",
+  "design-27.webp",
+  "design-28.webp",
+  "design-29.webp",
+  "design-3.webp",
+  "design-30.webp",
+  "design-31.webp",
+  "design-32.webp",
+  "design-33-1.webp",
+  "design-33.webp",
+  "design-34-1.webp",
+  "design-34.webp",
+  "design-35.webp",
+  "design-36.webp",
+  "design-38.webp",
+  "design-39.webp",
+  "design-4.webp",
+  "design-40.webp",
+  "design-41.webp",
+  "design-5.webp",
+  "design-6.webp",
+  "design-7.webp",
+  "design-8.webp",
+  "design-9.webp"
+].map(filename => ({
+  id: filename.replace('.webp', ''),
+  name: filename.replace('.webp', '').replace('design-', 'Design ').replace('desgin-', 'Design '),
+  url: `/design/${filename}`
+}));
 export const PRODUCTS = {
   tshirt: {
     id: "tshirt",
@@ -778,5 +827,6 @@ export const PRODUCTS = {
     colors: SWEATSHIRT_COLORS,
   },
 };
+
 
 export const getColorHex = (productType, colorName) => PRODUCTS[productType]?.colors[colorName]?.cor || "#ffffff";

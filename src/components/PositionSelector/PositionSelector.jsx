@@ -14,7 +14,7 @@ export default function PositionSelector({
   return (
     <div className="section position-section">
       <div className="section-heading-row">
-        <h3>Imagem Personalizada</h3>
+        <h3>Imagem - Personalizada</h3>
         <span className="position-count">
           {positions.filter((position) => slots[position.id]?.image).length}/{positions.length}
         </span>

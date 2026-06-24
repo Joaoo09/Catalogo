@@ -12,13 +12,14 @@
 }
 
 body {
-  background: #f4f4f5; 
+  background: #ffffff; 
   color: #18181b; 
   -webkit-font-smoothing: antialiased;
 }
 
 #root {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }

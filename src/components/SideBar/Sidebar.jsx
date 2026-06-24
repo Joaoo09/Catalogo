@@ -18,6 +18,7 @@ export default function Sidebar({
   onSizeChange,
   onImageRemove,
   onPositionChange,
+  galleryImages,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isColorOpen, setIsColorOpen] = useState(false);
@@ -175,7 +176,7 @@ export default function Sidebar({
       </div>
 
       <div className="section">
-        <h3>Vista da T-shirt</h3>
+        <h3>Vista</h3>
         <div className="view-options">
           <button
             type="button"
@@ -221,6 +222,23 @@ export default function Sidebar({
           />
         </div>
       )}
+
+      <div className="section">
+        <h3>Catálogo de Bordados</h3>
+        <div className="catalog-grid">
+          {galleryImages && galleryImages.map((design) => (
+            <button
+              key={design.id}
+              className="catalog-item"
+              onClick={() => onImageUpload(position, design.url)}
+              title={design.name}
+              type="button"
+            >
+              <img src={design.url} alt={design.name} />
+            </button>
+          ))}
+        </div>
+      </div>
       </aside>
     </>
   );
