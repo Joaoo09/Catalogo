@@ -559,7 +559,7 @@ Lime: {
   name: "Lime",
   front: "/sweatshirts/lime/lime_front.png",
   back: "",
-  cor: "#77bc21s",
+  cor: "#77bc21",
 },
 
 "Lime Fluor": {
@@ -767,9 +767,14 @@ Zinco: {
 };
 
 export const ART_GALLERY = [
-  "desgin-36.webp",
   "design-1.webp",
-  "design-10.webp",
+  "design-3.webp",
+  "design-4.webp",
+  "design-5.webp",
+  "design-6.webp",
+  "design-7.webp",
+  "design-8.webp",
+  "design-9.webp",
   "design-11.webp",
   "design-12.webp",
   "design-13.webp",
@@ -779,7 +784,6 @@ export const ART_GALLERY = [
   "design-17.webp",
   "design-18.webp",
   "design-19.webp",
-  "design-2.webp",
   "design-20.webp",
   "design-21.webp",
   "design-22.webp",
@@ -790,7 +794,6 @@ export const ART_GALLERY = [
   "design-27.webp",
   "design-28.webp",
   "design-29.webp",
-  "design-3.webp",
   "design-30.webp",
   "design-31.webp",
   "design-32.webp",
@@ -802,19 +805,26 @@ export const ART_GALLERY = [
   "design-36.webp",
   "design-38.webp",
   "design-39.webp",
-  "design-4.webp",
   "design-40.webp",
-  "design-41.webp",
-  "design-5.webp",
-  "design-6.webp",
-  "design-7.webp",
-  "design-8.webp",
-  "design-9.webp"
-].map(filename => ({
-  id: filename.replace('.webp', ''),
-  name: filename.replace('.webp', '').replace('design-', 'Design ').replace('desgin-', 'Design '),
-  url: `/design/${filename}`
-}));
+  "design-41.webp"
+].map(filename => {
+
+  const id = filename.replace(".webp", "");
+
+  let name = id;
+
+  // só aplica se for design
+  if (/design/i.test(name)) {
+    const match = name.match(/\d+$/); // vai buscar o último número
+    name = match ? match[0] : name;
+  }
+
+  return {
+    id,
+    name,
+    url: `/design/${filename}`
+  };
+});
 export const PRODUCTS = {
   tshirt: {
     id: "tshirt",

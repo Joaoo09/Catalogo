@@ -6,8 +6,6 @@
   align-items: stretch;
 }
 
-
-
 .conteudo {
   flex: 1;
   display: flex;
@@ -16,15 +14,12 @@
   padding: 1.5rem;
   background-color: #ffffff;
   overflow: hidden;
-  min-height: 0;       
-  min-width: 0; 
+  min-height: 0;
+  min-width: 0;
 }
-
-
 
 @media (max-width: 1023px) {
   .conteudo {
     padding-top: 3.5rem;
   }
 }
-

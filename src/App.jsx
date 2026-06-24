@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { PRODUCTS } from "./colorMap.js";
+import { PRODUCTS, ART_GALLERY } from "./colorMap.js";
 import Header from "./components/Header/Header.jsx";
 import Sidebar from "./components/SideBar/Sidebar.jsx";
 import Tshirtviewer from "./components/Tshirtviewer/TshirtViewer.jsx";
-import { ART_GALLERY } from "./colorMap.js";
 import "./App.css";
 
 const INITIAL_SLOTS = {

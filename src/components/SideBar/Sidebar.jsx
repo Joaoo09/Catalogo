@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { PRODUCTS, getColorHex } from "../../colorMap.js";
 import PositionSelector from "../PositionSelector/PositionSelector.jsx";
-import { getPositionsByView } from "../PositionSelector/positions.js";
 import "./sidebar.css";
 
 export default function Sidebar({
@@ -22,38 +21,37 @@ export default function Sidebar({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isColorOpen, setIsColorOpen] = useState(false);
+
   const currentProductColors = PRODUCTS[productType].colors;
-  const colorList = Object.values(currentProductColors);
+  const colorList = useMemo(
+    () => Object.values(currentProductColors),
+    [currentProductColors]
+  );
   const selectedColor = currentProductColors[color] || colorList[0];
   const image = currentSlot?.image;
-  const size = currentSlot?.size || 180;
+  const size = currentSlot?.size ?? 180;
 
-  const getColorStyle = (shirtColor) => {
-    const colorValue = getColorHex(productType, shirtColor.name);
-
-    if (colorValue.startsWith("/")) {
-      return {
-        backgroundImage: `url(${colorValue})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-      };
-    }
-
-    return { backgroundColor: colorValue };
-  };
-
-  const handleViewChange = (nextView) => {
-    onViewChange(nextView);
-    const availablePositions = getPositionsByView(nextView);
-    if (availablePositions.length > 0) {
-      onPositionChange(availablePositions[0].id);
-    }
-  };
+  const getColorStyle = useMemo(() => {
+    const cache = {};
+    return (shirtColor) => {
+      if (cache[shirtColor.name]) return cache[shirtColor.name];
+      const colorValue = getColorHex(productType, shirtColor.name);
+      const style = colorValue.startsWith("/")
+        ? {
+            backgroundImage: `url(${colorValue})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }
+        : { backgroundColor: colorValue };
+      cache[shirtColor.name] = style;
+      return style;
+    };
+  }, [productType]);
 
   const handleColorChange = (shirtColor) => {
     onColorChange(shirtColor.name);
     if (view === "back" && !shirtColor.back) {
-      handleViewChange("front");
+      onViewChange("front");
     }
   };
 
@@ -61,24 +59,17 @@ export default function Sidebar({
   const closeSidebar = () => setIsOpen(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsOpen(false);
-      }
+    const mql = window.matchMedia("(min-width: 1024px)");
+    const handleResize = (e) => {
+      if (e.matches) setIsOpen(false);
     };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    mql.addEventListener("change", handleResize);
+    return () => mql.removeEventListener("change", handleResize);
   }, []);
 
   useEffect(() => {
     const isMobile = window.matchMedia("(max-width: 1023px)").matches;
-    if (isOpen && isMobile) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-
+    document.body.style.overflow = isOpen && isMobile ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
@@ -130,115 +121,118 @@ export default function Sidebar({
         </div>
 
         <div className={`section color-dropdown ${isColorOpen ? "color-dropdown--open" : ""}`}>
-        <h3>Cor {productType === "tshirt" ? "da T-shirt" : "da Sweatshirt"}</h3>
-        <button
-          type="button"
-          className="color-dropdown-trigger"
-          onClick={() => setIsColorOpen((prev) => !prev)}
-          aria-expanded={isColorOpen}
-          aria-haspopup="listbox"
-        >
-          <span
-            className="color-dropdown-swatch"
-            style={getColorStyle(selectedColor)}
-            aria-hidden="true"
-          />
-          <span className="color-dropdown-label">{color}</span>
-          <span className={`color-dropdown-chevron ${isColorOpen ? "color-dropdown-chevron--open" : ""}`} aria-hidden="true">
-            ▾
-          </span>
-        </button>
+          <h3>Cor {productType === "tshirt" ? "da T-shirt" : "da Sweatshirt"}</h3>
+          <button
+            type="button"
+            className="color-dropdown-trigger"
+            onClick={() => setIsColorOpen((prev) => !prev)}
+            aria-expanded={isColorOpen}
+            aria-haspopup="listbox"
+          >
+            <span
+              className="color-dropdown-swatch"
+              style={getColorStyle(selectedColor)}
+              aria-hidden="true"
+            />
+            <span className="color-dropdown-label">{color}</span>
+            <span
+              className={`color-dropdown-chevron ${isColorOpen ? "color-dropdown-chevron--open" : ""}`}
+              aria-hidden="true"
+            >
+              ▾
+            </span>
+          </button>
 
-        <div
-          className="color-dropdown-panel"
-          role="listbox"
-          aria-label="Cor da T-shirt"
-          aria-hidden={!isColorOpen}
-        >
-          <div className="color-dropdown-panel-inner">
-            <div className="color-options">
-              {colorList.map((shirtColor) => (
-                <button
-                  key={shirtColor.name}
-                  type="button"
-                  role="option"
-                  aria-selected={color === shirtColor.name}
-                  className={color === shirtColor.name ? "active" : ""}
-                  onClick={() => handleColorChange(shirtColor)}
-                  title={shirtColor.name}
-                  aria-label={shirtColor.name}
-                  style={getColorStyle(shirtColor)}
-                />
-              ))}
+          <div
+            className="color-dropdown-panel"
+            role="listbox"
+            aria-label="Cor da T-shirt"
+            aria-hidden={!isColorOpen}
+          >
+            <div className="color-dropdown-panel-inner">
+              <div className="color-options">
+                {colorList.map((shirtColor) => (
+                  <button
+                    key={shirtColor.name}
+                    type="button"
+                    role="option"
+                    aria-selected={color === shirtColor.name}
+                    className={color === shirtColor.name ? "active" : ""}
+                    onClick={() => handleColorChange(shirtColor)}
+                    title={shirtColor.name}
+                    aria-label={shirtColor.name}
+                    style={getColorStyle(shirtColor)}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="section">
-        <h3>Vista</h3>
-        <div className="view-options">
-          <button
-            type="button"
-            className={`view-btn ${view === "front" ? "active" : ""}`}
-            onClick={() => handleViewChange("front")}
-          >
-            Frente
-          </button>
-          <button
-            type="button"
-            className={`view-btn ${view === "back" ? "active" : ""}`}
-            onClick={() => handleViewChange("back")}
-            disabled={!currentProductColors[color]?.back}
-            title={!currentProductColors[color]?.back ? "Verso indisponivel para esta cor" : ""}
-          >
-            Verso
-          </button>
-        </div>
-      </div>
-
-      <PositionSelector
-        view={view}
-        selected={position}
-        onPositionChange={onPositionChange}
-        slots={slots}
-        onImageUpload={onImageUpload}
-        onImageRemove={onImageRemove}
-      />
-
-      {image && (
         <div className="section">
-          <h3>Ajustes</h3>
-          <div className="size-label">
-            <span>Tamanho</span>
-            <span>{size}px</span>
-          </div>
-          <input
-            type="range"
-            min="50"
-            max="250"
-            value={size}
-            onChange={(e) => onSizeChange(e.target.value)}
-          />
-        </div>
-      )}
-
-      <div className="section">
-        <h3>Catálogo de Bordados</h3>
-        <div className="catalog-grid">
-          {galleryImages && galleryImages.map((design) => (
+          <h3>Vista</h3>
+          <div className="view-options">
             <button
-              key={design.id}
-              className="catalog-item"
-              onClick={() => onImageUpload(position, design.url)}
-              title={design.name}
               type="button"
+              className={`view-btn ${view === "front" ? "active" : ""}`}
+              onClick={() => onViewChange("front")}
             >
-              <img src={design.url} alt={design.name} />
+              Frente
             </button>
-          ))}
+            <button
+              type="button"
+              className={`view-btn ${view === "back" ? "active" : ""}`}
+              onClick={() => onViewChange("back")}
+              disabled={!currentProductColors[color]?.back}
+              title={!currentProductColors[color]?.back ? "Verso indisponivel para esta cor" : ""}
+            >
+              Verso
+            </button>
+          </div>
         </div>
-      </div>
+
+        <PositionSelector
+          view={view}
+          selected={position}
+          onPositionChange={onPositionChange}
+          slots={slots}
+          onImageUpload={onImageUpload}
+          onImageRemove={onImageRemove}
+        />
+
+        {image && (
+          <div className="section">
+            <h3>Ajustes</h3>
+            <div className="size-label">
+              <span>Tamanho</span>
+              <span>{size}px</span>
+            </div>
+            <input
+              type="range"
+              min="50"
+              max="250"
+              value={size}
+              onChange={(e) => onSizeChange(e.target.value)}
+            />
+          </div>
+        )}
+
+        <div className="section">
+          <h3>Catálogo de Bordados</h3>
+          <div className="catalog-grid">
+            {galleryImages && galleryImages.map((design) => (
+              <button
+                key={design.id}
+                className="catalog-item"
+                onClick={() => onImageUpload(position, design.url)}
+                title={design.name}
+                type="button"
+              >
+                <img src={design.url} alt={design.name} loading="lazy" />
+              </button>
+            ))}
+          </div>
+        </div>
       </aside>
     </>
   );

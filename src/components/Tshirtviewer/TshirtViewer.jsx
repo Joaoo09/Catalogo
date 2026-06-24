@@ -14,12 +14,13 @@ const VIEW_SLOTS = {
 
 export default function Tshirtviewer({ productType, color, view, slots }) {
   const currentProductColors = PRODUCTS[productType].colors;
-  const colorList = Object.values(currentProductColors);
-  const selectedColor = currentProductColors[color] || colorList[0];
-  const tshirtImage = view === "back" && selectedColor.back
-    ? selectedColor.back
-    : selectedColor.front;
-  const activeSlots = VIEW_SLOTS[view] || VIEW_SLOTS.front;
+  const selectedColor =
+    currentProductColors[color] ?? Object.values(currentProductColors)[0];
+  const tshirtImage =
+    view === "back" && selectedColor.back
+      ? selectedColor.back
+      : selectedColor.front;
+  const activeSlots = VIEW_SLOTS[view] ?? VIEW_SLOTS.front;
 
   return (
     <div className="tshirt-frame">
@@ -27,7 +28,7 @@ export default function Tshirtviewer({ productType, color, view, slots }) {
         <img
           className="tshirt-image"
           src={tshirtImage}
-          alt={`T-shirt ${color} ${view}`}
+          alt={`${productType === "tshirt" ? "T-shirt" : "Sweatshirt"} ${color} ${view}`}
         />
 
         {activeSlots.map((slotId) => {

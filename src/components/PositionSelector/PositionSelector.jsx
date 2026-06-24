@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import "./PositionSelector.css";
 import { getPositionsByView } from "./positions.js";
 
@@ -10,6 +11,17 @@ export default function PositionSelector({
   onImageRemove,
 }) {
   const positions = getPositionsByView(view);
+
+  const handleImageChange = useCallback(
+    (positionId, event) => {
+      const file = event.target.files[0];
+      if (file) {
+        onImageUpload(positionId, URL.createObjectURL(file));
+      }
+      event.target.value = "";
+    },
+    [onImageUpload]
+  );
 
   return (
     <div className="section position-section">
@@ -26,14 +38,6 @@ export default function PositionSelector({
           const occupied = Boolean(image);
           const active = selected === position.id;
           const inputId = `slot-input-${position.id}`;
-
-          const handleImageChange = (event) => {
-            const file = event.target.files[0];
-            if (file) {
-              onImageUpload(position.id, URL.createObjectURL(file));
-            }
-            event.target.value = "";
-          };
 
           if (occupied) {
             return (
@@ -87,7 +91,7 @@ export default function PositionSelector({
                 id={inputId}
                 type="file"
                 accept=".png, .svg, image/png, image/svg+xml"
-                onChange={handleImageChange}
+                onChange={(e) => handleImageChange(position.id, e)}
                 hidden
               />
             </label>

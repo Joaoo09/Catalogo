@@ -207,15 +207,14 @@
   overflow: hidden;
   max-height: 0;
   opacity: 0;
-  transition: max-height 0.28s ease, opacity 0.2s ease, margin-top 0.28s ease;
   margin-top: 0;
+  transition: max-height 0.28s ease, opacity 0.2s ease, margin-top 0.28s ease;
 }
 
 .color-dropdown.color-dropdown--open .color-dropdown-panel {
   max-height: fit-content;
   opacity: 1;
   margin-top: 12px;
-  overflow: hidden;
 }
 
 .color-options {
