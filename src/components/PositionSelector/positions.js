@@ -2,20 +2,20 @@ export const POSITIONS_BY_VIEW = {
   front: [
     {
       id: "chest-right",
-      label: "Peito esquerdo",
-      hint: "Clique para adicionar uma imagem",
+      label: "Peito Esquerdo",
+      hint: "Clique no + adicionar uma imagem personalizada",
     },
     {
       id: "center-front",
-      label: "Centro frente",
-      hint: "Clique para adicionar uma imagem",
+      label: "Centro Frente",
+      hint: "Clique no + adicionar uma imagem personalizada",
     },
   ],
   back: [
     {
       id: "center-back",
       label: "Centro costas",
-      hint: "Clique para adicionar uma imagem",
+      hint: "Clique no + adicionar uma imagem personalizada",
     },
   ],
 };

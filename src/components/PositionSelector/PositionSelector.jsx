@@ -26,7 +26,8 @@ export default function PositionSelector({
   return (
     <div className="section position-section">
       <div className="section-heading-row">
-        <h3>Imagem - Personalizada</h3>
+      <h3>Posição + 
+         Imagem Personalizada</h3>
         <span className="position-count">
           {positions.filter((position) => slots[position.id]?.image).length}/{positions.length}
         </span>
@@ -72,10 +73,9 @@ export default function PositionSelector({
           }
 
           return (
-            <label
+            <div
               key={position.id}
               className={`position-btn ${active ? "active" : ""} empty`}
-              htmlFor={inputId}
               onClick={() => onPositionChange(position.id)}
             >
               <span className="position-copy">
@@ -83,9 +83,14 @@ export default function PositionSelector({
                 <span className="position-hint">{position.hint}</span>
               </span>
               <span className="position-actions">
-                <span className="position-add" aria-hidden="true">
+                <label 
+                  className="position-add" 
+                  htmlFor={inputId} 
+                  aria-label={`Adicionar imagem para ${position.label}`}
+                  onClick={(e) => e.stopPropagation()}
+                >
                   +
-                </span>
+                </label>
               </span>
               <input
                 id={inputId}
@@ -94,7 +99,7 @@ export default function PositionSelector({
                 onChange={(e) => handleImageChange(position.id, e)}
                 hidden
               />
-            </label>
+            </div>
           );
         })}
       </div>

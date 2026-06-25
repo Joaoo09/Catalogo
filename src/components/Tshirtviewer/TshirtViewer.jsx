@@ -2,9 +2,9 @@ import { PRODUCTS } from "../../colorMap.js";
 import "./tshirt.css";
 
 const POSITION_STYLES = {
-  "chest-right": { top: "31%", left: "58%", transform: "translate(-50%, -50%)" },
-  "center-front": { top: "41%", left: "50%", transform: "translate(-50%, -50%)" },
-  "center-back": { top: "40%", left: "50%", transform: "translate(-50%, -50%)" },
+  "chest-right": { top: "34%", left: "57%", transform: "translate(-50%, -50%)" },
+  "center-front": { top: "50%", left: "51%", transform: "translate(-50%, -50%)" },
+  "center-back": { top: "47%", left: "50%", transform: "translate(-50%, -50%)" },
 };
 
 const VIEW_SLOTS = {

@@ -229,6 +229,7 @@ export default function Sidebar({
                 type="button"
               >
                 <img src={design.url} alt={design.name} loading="lazy" />
+                <span className="catalog-item-label">{design.name}</span>
               </button>
             ))}
           </div>
