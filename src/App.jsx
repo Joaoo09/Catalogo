@@ -4,6 +4,7 @@ import Header from "./components/Header/Header.jsx";
 import Sidebar from "./components/SideBar/Sidebar.jsx";
 import Tshirtviewer from "./components/Tshirtviewer/TshirtViewer.jsx";
 import "./App.css";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const INITIAL_SLOTS = {
   "chest-right": { image: null, size: 180 },
@@ -99,6 +100,7 @@ function App() {
           />
         </main>
       </div>
+      <SpeedInsights />
     </>
   );
 }
